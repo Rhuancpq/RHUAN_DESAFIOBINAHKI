@@ -16,7 +16,7 @@ module.exports = {
   | interacting with SQL databases.
   |
   */
-  connection: Env.get("DB_CONNECTION", "mysql"),
+  connection: Env.get("DB_CONNECTION", "mysql2"),
   /*
   |--------------------------------------------------------------------------
   | MySQL
@@ -27,8 +27,8 @@ module.exports = {
   | npm i --save mysql
   |
   */
-  mysql: {
-    client: "mysql",
+  mysql2: {
+    client: "mysql2",
     connection: {
       host: Env.get("DB_HOST", "localhost"),
       port: Env.get("DB_PORT", "3306"),
@@ -36,5 +36,6 @@ module.exports = {
       password: Env.get("DB_PASSWORD", ""),
       database: Env.get("DB_DATABASE", "desafio"),
     },
+    debug: Env.get("DB_DEBUG", false),
   },
 };
