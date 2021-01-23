@@ -1,15 +1,15 @@
-'use strict'
+"use strict";
+
+const User = use("App/Models/User");
 
 class UserController {
-    const User = use('app/Models/User');
+  async index({ view }) {
+    return view.render("users.index");
+  }
 
-    async index({view}){
-        return view.render("users.index");
-    }
-
-    async store({request, response, session}){
-        return response.redirect('back')
-    }
+  async store({ request, response, session }) {
+    return response.redirect("back");
+  }
 }
 
-module.exports = UserController
+module.exports = UserController;
