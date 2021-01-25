@@ -17,4 +17,4 @@
 const Route = use("Route");
 
 Route.get("/", "UserController.index");
-Route.post("/", "UserController.store");
+Route.post("/users", "UserController.store");
