@@ -1,6 +1,7 @@
 "use strict";
 
 const User = use("App/Models/User");
+const Mail = use("Mail");
 const { validate } = use("Validator");
 
 class UserController {
@@ -47,6 +48,13 @@ class UserController {
     user.outracritica = data.outracritica;
 
     await user.save();
+
+    await Mail.send("users.download", data, (message) => {
+      message.from("no-reply@desafio.binahki.com");
+      message.replyTo("no-reply@desafio.binahki.com");
+      message.to(data.email.toString(), data.nome);
+      message.subject("E-book Binahki");
+    });
 
     return response.redirect("back");
   }
