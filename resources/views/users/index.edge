@@ -1,58 +1,70 @@
 @layout('master')
 
 @section('content')
-  <h1>Receba Nosso Material Gratuitamente</h1>
-  <form method="POST" action="/users">
-    {{ csrfField() }}
-    <div>
-      <label for="nome">Nome *</label><br/>
-      <input type="text" name="nome" required value="{{old('nome',"")}}" /><br/>
-    </div>
-    <div>
-      <label for="email">E-mail *</label><br/>
-      <input type="text" name="email" value="{{old('email','')}}" required/><br/>
-    </div>
-    @if(hasErrorFor('email.email'))
-    {{ getErrorFor('email.email') }}
-    @endif
-    @if(hasErrorFor('email.unique'))
-    {{ getErrorFor('email.unique') }}
-    @endif
-    <div>
-      <label for="empresa">Empresa *</label><br/>
-      <input type="text" name="empresa" value="{{old('empresa','')}}" /><br/>
-    </div>
-    <div>
-      <label for="critica">Qual a questão mais crítica de sua empresa hoje? *
-        </label><br/>
-      <select name="critica">
-        <option value="1">
-            Não monitoramento de máquinas (Falta de informação)
-        </option>
-        <option value="2">
-            Falta de gestão (De produção, manutenção ou energia)
-        </option>
-        <option value="3">
-            Falta de consultores (Manutenção e produção)
-        </option>
-        <option value="4">
-            Outra
-        </option>
-      </select>
-    </div>
-    <div>
-      <label for="outracritica"><br/>
-        Conte-nos qual é a questão mais crítica de seu 
-        negócio (caso a opção anterior tenha sido “Outra”)   
-      </label><br/>
-      <textarea name="outracritica"
-        rows="4" cols="50"
-        placeholder="Digite aqui...">{{old('outracritica','')}}</textarea>
-    </div>
-    @if(hasErrorFor('outracritica.required_when'))
-    {{ getErrorFor('outracritica.required_when') }}
-    @endif
+  {{style("index")}}
+  <div class="Logodiv">
+    <img class="Logo" src="logo.png"/>
+  </div>
+  <div class="Content">
+    <h1>Receba Nosso Material Gratuitamente</h1>
+    <div class="Container">
+      <h3>Superando a Pandemia com a Indústria 4.0</h2>
+      <h6>Preencha os campos abaixo para receber</h6>
+      <div class="Form">
+        <img class="Ebook" src="ebook.png"/> 
+        <form method="POST" action="/users">
+          {{ csrfField() }}
+          <div>
+            <label for="nome">Nome *</label><br/>
+            <input type="text" name="nome" required value="{{old('nome',"")}}" /><br/>
+          </div>
+          <div>
+            <label for="email">E-mail *</label><br/>
+            <input type="text" name="email" value="{{old('email','')}}" required/><br/>
+          </div>
+          @if(hasErrorFor('email.email'))
+          {{ getErrorFor('email.email') }}
+          @endif
+          @if(hasErrorFor('email.unique'))
+          {{ getErrorFor('email.unique') }}
+          @endif
+          <div>
+            <label for="empresa">Empresa *</label><br/>
+            <input type="text" name="empresa" value="{{old('empresa','')}}" /><br/>
+          </div>
+          <div>
+            <label for="critica">Qual a questão mais crítica de sua empresa hoje? *
+              </label><br/>
+            <select name="critica">
+              <option value="1">
+                  Não monitoramento de máquinas (Falta de informação)
+              </option>
+              <option value="2">
+                  Falta de gestão (De produção, manutenção ou energia)
+              </option>
+              <option value="3">
+                  Falta de consultores (Manutenção e produção)
+              </option>
+              <option value="4">
+                  Outra
+              </option>
+            </select>
+          </div>
+          <div>
+            <label for="outracritica"><br/>
+              Conte-nos qual é a questão mais crítica de seu 
+              negócio (caso a opção anterior tenha sido “Outra”)   
+            </label><br/>
+            <textarea name="outracritica"
+              placeholder="Digite aqui...">{{old('outracritica','')}}</textarea>
+          </div>
+          @if(hasErrorFor('outracritica.required_when'))
+          {{ getErrorFor('outracritica.required_when') }}
+          @endif
 
-    <input type="submit" value="Submit">
-  </form>
+          <input class="Button" type="submit" value="ENVIAR">
+        </form>
+      </div>
+    </div>
+  </div>
 @endsection
