@@ -31,7 +31,7 @@
   border-radius: 30px;
   align-self: center;
   max-width: 65%;
-  max-height: 65%;
+  max-height: 90%;
   padding: 1em 0;
 }
 
@@ -52,12 +52,13 @@
 
 .Button {
   margin: 2em 0;
-  height: 10%;
+  height: 5em;
   width: 10em;
   color: white;
   background: #328194;
   border-radius: 6px;
   border: none;
+  margin-bottom: 10px;
 }
 
 h1 {
@@ -73,6 +74,12 @@ h6 {
 
 form {
   margin-left: 30px;
+  display: flex;
+  flex-direction: column;
+}
+
+form div {
+  margin-top: 10px;
 }
 
 input[type="text"],
@@ -84,6 +91,7 @@ select {
   border: 1px solid rgba(0, 0, 0, 0.5);
   box-sizing: border-box;
   border-radius: 9px;
+  margin-top: 5px;
 }
 
 textarea {
@@ -93,6 +101,7 @@ textarea {
   border: 1px solid rgba(0, 0, 0, 0.5);
   box-sizing: border-box;
   border-radius: 9px;
+  margin-top: 5px;
 }
 
 label {

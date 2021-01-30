@@ -1,5 +1,63 @@
 @layout('master')
 
 @section('content')
-  <h2><em>Dados Inseridos:</em></h2>
+  {{style("download")}}
+  <div class="Wave-sup-div">
+    <img class="Wave-sup-dark" src="wave-sup-dark.svg"/>
+    <img class="Wave-sup-light" src="wave-sup-light.svg"/>
+    <img class="Logo" src="logo-branco.png"/>
+  </div>
+  <div class="Container">
+    <h2><em>Dados Inseridos:</em> <hr></h2>
+    <div class="Conteudo">
+      <div>
+        Nome: <span>{{nome}}</span>
+      </div>
+      <hr>
+      <div>
+        Email: <span>{{email}}</span>
+      </div>
+      <hr>
+      <div>
+        Empresa: <span>{{empresa}}</span>
+      </div>
+      <hr>
+      <div>
+        A questão mais crítica de sua empresa:
+        @if(critica == 1)
+          <span>Não monitoramento de máquinas (Falta de informação)</span>
+        @elseif(critica == 2)
+          <span>Falta de gestão (De produção, manutenção ou energia)</span>
+        @elseif(critica == 3)
+          <span>Falta de consultores (Manutenção e produção)</span>
+        @else
+          <span>{{outracritica}}</span>
+        @endif
+      </div>
+      <hr>
+    </div>
+
+    <h3>Ebook:<hr></h3>
+    <div class="Ebook-div">
+      <img class="Ebook" src="ebook.png"/>
+      <div class="Text">
+        <p>
+          Agradecemos por adquirir nosso E-book. Clique no botão abaixo para iniciar o Download.
+        </p>
+        <a href="https://drive.google.com/file/d/1WPxZqdSVOWMAHKgDrn5aboVpVQ0w2VNE/view?usp=sharing"
+        class="Button">BAIXAR</a>  
+      </div>
+    </div>
+
+    <h4> Agradecemos a confiança </h4>
+    <div class="Obs-div">
+      <p class="Obs">Para outros cálculos Real-Time como este, veja mais
+        informações sobre nossos produtos na página online da 
+        <a href="https://binahki.com.br/">BinahKI</a>.</p>
+    </div>
+  </div>
+  <div class="Wave-inf-div">
+    <img class="Wave-inf-dark" src="wave-inf-dark.svg"/>
+    <img class="Wave-inf-light" src="wave-inf-light.svg"/>
+  </div>
 @endsection
