@@ -50,8 +50,7 @@ class UserController {
     await user.save();
 
     await Mail.send("users.download", data, (message) => {
-      message.from("no-reply@desafio.binahki.com");
-      message.replyTo("no-reply@desafio.binahki.com");
+      message.from("rhuancarlos.queiroz@gmail.com");
       message.to(data.email.toString(), data.nome);
       message.subject("E-book Binahki");
     });
