@@ -1,179 +1,176 @@
 @layout('master')
 
-@section('css')
-  <style>
-    .Container {
-      display: flex;
-      flex-direction: column;
-    }
-
-    .Conteudo {
-      width: 80%;
-      align-self: center;
-    }
-
-    .Conteudo div {
-      overflow: hidden;
-      margin-left: 15px;
-      margin-top: 20px;
-    }
-
-    .Conteudo div span {
-      float: right;
-      text-align: right;
-      margin-right: 15px;
-    }
-
-    .Conteudo hr {
-      margin-top: auto;
-    }
-
-    .Ebook {
-      margin-left: 0;
-      margin-right: auto;
-      max-width: 344px;
-      max-height: 265px;
-      width: auto;
-      height: auto;
-      align-self: center;
-    }
-
-    .Ebook-div {
-      display: inline-flex;
-      margin-right: 10%;
-      padding-left: 0;
-    }
-
-    .Wave-sup-div {
-      position: relative;
-      top: 0;
-      left: 0;
-      height: 20%;
-    }
-
-    .Wave-sup-dark {
-      position: relative;
-      top: 0;
-      left: 0;
-      max-width: 100%;
-      max-height: 100%;
-    }
-
-    .Wave-sup-light {
-      position: absolute;
-      top: 0;
-      left: 0;
-      max-width: 100%;
-      max-height: 100%;
-    }
-
-    .Logo {
-      position: absolute;
-      top: 30px;
-      left: 15px;
-      width: 200px;
-      height: 32.616px;
-      background: url(logo-branco.png);
-      filter: drop-shadow(7px 6px 4px rgba(3, 82, 101, 0.79));
-      image-rendering: crisp-edges;
-    }
-
-    .Wave-inf-div {
-      position: relative;
-      bottom: 0;
-      left: 0;
-      height: 20%;
-    }
-
-    .Wave-inf-dark {
-      position: relative;
-      bottom: 20px;
-      left: 0;
-      max-width: 100%;
-      max-height: 100%;
-    }
-
-    .Wave-inf-light {
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      max-width: 100%;
-      max-height: 100%;
-    }
-
-    .Button {
-      -webkit-appearance: button;
-      -moz-appearance: button;
-      appearance: button;
-
-      text-decoration: none;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 3em;
-      width: 10em;
-      color: white;
-      background: #062b4c;
-      border-radius: 6px;
-      border: none;
-      margin: 30% 0 0 30%;
-    }
-
-    .Text p {
-      text-align: end;
-      word-wrap: break-word;
-    }
-
-    .Obs-div {
-      align-self: center;
-      width: 55%;
-    }
-
-    .Obs {
-      text-align: center;
-    }
-
-    .Obs a {
-      color: #02bde9;
-    }
-
-    h2 {
-      width: fit-content;
-      display: inline-block;
-      margin-left: 20px;
-      margin-bottom: auto;
-    }
-
-    h2 hr {
-      height: 1.5px;
-      background-color: black;
-    }
-
-    h3 {
-      margin-left: 20px;
-      width: fit-content;
-      display: inline-block;
-    }
-
-    h3 hr {
-      height: 1.5px;
-      background-color: black;
-    }
-
-    h4 {
-      margin-top: 7em;
-      color: #062b4c;
-      text-align: center;
-    }
-
-    hr {
-      height: 1;
-      background-color: black;
-    }
-  </style>
-@endsection
-
 @section('content')
+<style>
+  .Container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .Conteudo {
+    width: 80%;
+    align-self: center;
+  }
+
+  .Conteudo div {
+    overflow: hidden;
+    margin-left: 15px;
+    margin-top: 20px;
+  }
+
+  .Conteudo div span {
+    float: right;
+    text-align: right;
+    margin-right: 15px;
+  }
+
+  .Conteudo hr {
+    margin-top: auto;
+  }
+
+  .Ebook {
+    margin-left: 0;
+    margin-right: auto;
+    max-width: 344px;
+    max-height: 265px;
+    width: auto;
+    height: auto;
+    align-self: center;
+  }
+
+  .Ebook-div {
+    display: inline-flex;
+    margin-right: 10%;
+    padding-left: 0;
+  }
+
+  .Wave-sup-div {
+    position: relative;
+    top: 0;
+    left: 0;
+    height: 20%;
+  }
+
+  .Wave-sup-dark {
+    position: relative;
+    top: 0;
+    left: 0;
+    max-width: 100%;
+    max-height: 100%;
+  }
+
+  .Wave-sup-light {
+    position: absolute;
+    top: 0;
+    left: 0;
+    max-width: 100%;
+    max-height: 100%;
+  }
+
+  .Logo {
+    position: absolute;
+    top: 30px;
+    left: 15px;
+    width: 200px;
+    height: 32.616px;
+    background: url(logo-branco.png);
+    filter: drop-shadow(7px 6px 4px rgba(3, 82, 101, 0.79));
+    image-rendering: crisp-edges;
+  }
+
+  .Wave-inf-div {
+    position: relative;
+    bottom: 0;
+    left: 0;
+    height: 20%;
+  }
+
+  .Wave-inf-dark {
+    position: relative;
+    bottom: 20px;
+    left: 0;
+    max-width: 100%;
+    max-height: 100%;
+  }
+
+  .Wave-inf-light {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    max-width: 100%;
+    max-height: 100%;
+  }
+
+  .Button {
+    -webkit-appearance: button;
+    -moz-appearance: button;
+    appearance: button;
+
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 3em;
+    width: 10em;
+    color: white;
+    background: #062b4c;
+    border-radius: 6px;
+    border: none;
+    margin: 30% 0 0 30%;
+  }
+
+  .Text p {
+    text-align: end;
+    word-wrap: break-word;
+  }
+
+  .Obs-div {
+    align-self: center;
+    width: 55%;
+  }
+
+  .Obs {
+    text-align: center;
+  }
+
+  .Obs a {
+    color: #02bde9;
+  }
+
+  h2 {
+    width: fit-content;
+    display: inline-block;
+    margin-left: 20px;
+    margin-bottom: auto;
+  }
+
+  h2 hr {
+    height: 1.5px;
+    background-color: black;
+  }
+
+  h3 {
+    margin-left: 20px;
+    width: fit-content;
+    display: inline-block;
+  }
+
+  h3 hr {
+    height: 1.5px;
+    background-color: black;
+  }
+
+  h4 {
+    margin-top: 7em;
+    color: #062b4c;
+    text-align: center;
+  }
+
+  hr {
+    height: 1;
+    background-color: black;
+  }
+</style>
   <div class="Wave-sup-div">
     <img class="Wave-sup-dark" src="wave-sup-dark.svg"/>
     <img class="Wave-sup-light" src="wave-sup-light.svg"/>
